@@ -1,0 +1,20 @@
+node_modules/
+dist/
+apps/frontend/vite.config.js
+apps/frontend/vite.config.d.ts
+build/
+coverage/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Local-only material retained outside the publishable source tree.
+archive/
+publication/
+release/
+.src/
+.vercel/

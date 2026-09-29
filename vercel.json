@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm ci && npm run build --workspace presibo-lite-frontend",
+  "outputDirectory": "apps/frontend/dist",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "apps/frontend/dist/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}

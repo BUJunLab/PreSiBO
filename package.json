@@ -1,0 +1,41 @@
+{
+  "name": "presibo-lite-interface",
+  "version": "1.0.1",
+  "license": "MIT",
+  "private": true,
+  "description": "PreSiBO-Lite web interface",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "dependencies": {
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@mui/x-internals": "9.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspace presibo-lite-frontend && npm run build --workspace presibo-lite-backend",
+    "test": "npm run test --workspace presibo-lite-frontend && npm run test --workspace presibo-lite-backend",
+    "smoke": "npm run smoke --workspace presibo-lite-frontend && npm run smoke --workspace presibo-lite-backend",
+    "dev:frontend": "npm run dev --workspace presibo-lite-frontend",
+    "dev:backend": "npm run dev --workspace presibo-lite-backend"
+  },
+  "overrides": {
+    "plotly.js": "3.7.0",
+    "qs": "^6.16.0",
+    "exceljs": {
+      "uuid": "^11.1.1"
+    },
+    "maplibre-gl": "6.9.0",
+    "earcut": "3.2.3",
+    "bidi-js": "1.0.3",
+    "@mui/x-internals": "9.0.0",
+    "react": "$react",
+    "react-dom": "$react-dom"
+  }
+}

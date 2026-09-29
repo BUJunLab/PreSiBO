@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --presibo-blue: #1f5f94;
+  --presibo-blue-soft: #3f7fb0;
+  --presibo-amber: #d97a3a;
+  --presibo-ink: #18324a;
+  --presibo-surface: rgba(255, 255, 255, 0.92);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--presibo-ink);
+  background:
+    radial-gradient(circle at top left, rgba(63, 127, 176, 0.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(217, 122, 58, 0.12), transparent 24%),
+    linear-gradient(180deg, #eef3f8 0%, #f7fafc 100%);
+}
+
+.app-drawer {
+  position: relative;
+}
+
+.app-drawer::after {
+  display: none;
+}
+
+.app-title-bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1250;
+  padding: 10px 18px 10px 84px;
+  color: #123647;
+  background: linear-gradient(180deg, #63d0d4 0%, #57c0cb 100%);
+  border-bottom: 1px solid rgba(18, 54, 71, 0.12);
+  box-shadow: 0 12px 28px rgba(16, 52, 81, 0.12);
+}
+
+.panel-card {
+  background: var(--presibo-surface);
+  animation: card-enter 260ms ease-out;
+}
+
+.landing-card {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 28px 70px rgba(23, 46, 79, 0.14);
+  animation: card-enter 320ms ease-out;
+}
+
+.panel-card a {
+  color: var(--presibo-blue);
+}
+
+.panel-card-header {
+  padding: 18px 22px;
+  color: white;
+  background: linear-gradient(135deg, var(--presibo-blue), var(--presibo-blue-soft));
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
